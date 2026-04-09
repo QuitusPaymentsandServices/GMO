@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMO by GETESA | Dinero móvil en Guinea Ecuatorial</title>
+    <meta
+      name="description"
+      content="GMO by GETESA: envía, recibe y gestiona tu dinero móvil en segundos con una experiencia simple, rápida y segura."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gmoBlue: "#1026BE",
+              gmoLime: "#9AE63A",
+              gmoDark: "#08126A"
+            },
+            boxShadow: {
+              glow: "0 0 0 1px rgba(154,230,58,.35), 0 18px 60px rgba(16,38,190,.45)",
+              soft: "0 18px 40px rgba(8,18,106,.25)"
+            },
+            backgroundImage: {
+              heroGrid:
+                "radial-gradient(circle at 20% 20%, rgba(154,230,58,.20) 0, transparent 30%), radial-gradient(circle at 85% 10%, rgba(154,230,58,.14) 0, transparent 22%), linear-gradient(145deg, #08126A 0%, #1026BE 60%, #0D35DA 100%)"
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-9px)" }
+              }
+            },
+            animation: {
+              float: "float 5s ease-in-out infinite"
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      .glass {
+        backdrop-filter: blur(14px);
+        background: linear-gradient(130deg, rgba(255,255,255,.16), rgba(255,255,255,.06));
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-100 antialiased selection:bg-gmoLime selection:text-gmoDark">
+    <div class="relative overflow-hidden bg-heroGrid">
+      <div class="absolute inset-0 opacity-20" aria-hidden="true">
+        <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="white" stroke-width="0.12" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <header class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+        <a href="#" class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gmoLime/95 p-2">
+            <svg viewBox="0 0 100 100" class="h-full w-full text-gmoBlue" fill="currentColor" aria-hidden="true">
+              <path d="M48 8l20 20-20 20V32L30 50l18 18v24L12 56l18-18 18-18V8z" />
+            </svg>
+          </span>
+          <span class="text-2xl font-black tracking-wider text-gmoLime">GMO</span>
+          <span class="hidden rounded-full border border-gmoLime/40 px-3 py-1 text-xs font-semibold text-gmoLime/90 md:inline">by GETESA</span>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium text-white/85 md:flex">
+          <a href="#servicios" class="hover:text-gmoLime">Servicios</a>
+          <a href="#seguridad" class="hover:text-gmoLime">Seguridad</a>
+          <a href="#como-funciona" class="hover:text-gmoLime">Cómo funciona</a>
+          <a href="#faq" class="hover:text-gmoLime">FAQ</a>
+        </nav>
+      </header>
+
+      <section class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-24 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-14">
+        <div>
+          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gmoLime/35 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-gmoLime">
+            Simple · Rápido · Seguro
+          </p>
+          <h1 class="text-4xl font-black leading-tight text-white md:text-6xl">
+            El dinero móvil
+            <span class="text-gmoLime">más inteligente</span>
+            de Guinea Ecuatorial.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg text-white/85 md:text-xl">
+            Con GMO de GETESA, envías y recibes dinero en segundos, pagas servicios y controlas tus finanzas desde tu teléfono, sin complicaciones.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#" class="rounded-2xl bg-gmoLime px-7 py-3 text-sm font-bold uppercase tracking-wide text-gmoDark transition hover:scale-[1.02] hover:shadow-glow">
+              Abrir cuenta ahora
+            </a>
+            <a href="#como-funciona" class="rounded-2xl border border-white/30 px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gmoLime hover:text-gmoLime">
+              Ver demo
+            </a>
+          </div>
+
+          <div class="mt-12 grid max-w-md grid-cols-3 gap-4 text-center">
+            <article class="glass rounded-2xl p-4 shadow-soft">
+              <p class="text-2xl font-extrabold text-gmoLime">24/7</p>
+              <p class="mt-1 text-xs text-white/80">Disponible</p>
+            </article>
+            <article class="glass rounded-2xl p-4 shadow-soft">
+              <p class="text-2xl font-extrabold text-gmoLime">0 colas</p>
+              <p class="mt-1 text-xs text-white/80">Todo móvil</p>
+            </article>
+            <article class="glass rounded-2xl p-4 shadow-soft">
+              <p class="text-2xl font-extrabold text-gmoLime">100%</p>
+              <p class="mt-1 text-xs text-white/80">Control digital</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="relative mx-auto w-full max-w-lg">
+          <div class="absolute -left-12 top-8 hidden h-32 w-32 rotate-45 rounded-3xl bg-gmoLime/20 blur-2xl md:block"></div>
+          <div class="absolute -right-8 bottom-2 h-28 w-28 rounded-full bg-gmoLime/30 blur-2xl"></div>
+
+          <div class="animate-float rounded-[2.6rem] border border-white/25 bg-gmoDark/55 p-3 shadow-glow backdrop-blur-sm">
+            <div class="rounded-[2.2rem] bg-gradient-to-b from-[#1132d4] to-[#0b1f8f] p-6">
+              <div class="mb-5 flex items-center justify-between">
+                <p class="text-sm font-semibold text-gmoLime">GMO Wallet</p>
+                <span class="rounded-full bg-gmoLime/20 px-3 py-1 text-xs text-gmoLime">Activo</span>
+              </div>
+              <p class="text-sm text-white/75">Saldo disponible</p>
+              <p class="mt-2 text-4xl font-black text-white">1.250.000 XAF</p>
+
+              <div class="mt-6 space-y-3">
+                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
+                  <span>Envío a Ana M.</span>
+                  <span class="font-semibold text-gmoLime">-15.000</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
+                  <span>Recarga móvil</span>
+                  <span class="font-semibold text-gmoLime">-2.000</span>
+                </div>
+                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
+                  <span>Depósito</span>
+                  <span class="font-semibold text-gmoLime">+50.000</span>
+                </div>
+              </div>
+              <button class="mt-6 w-full rounded-xl bg-gmoLime py-3 text-sm font-extrabold text-gmoDark">Enviar dinero</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <main class="bg-slate-50 text-slate-900">
+      <section id="servicios" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div class="mb-12 max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gmoBlue">Servicios GMO</p>
+          <h2 class="mt-3 text-3xl font-black text-slate-900 md:text-4xl">Todo lo que necesitas para mover tu dinero con confianza.</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-lg font-extrabold text-gmoBlue">Enviar y recibir</h3>
+            <p class="mt-2 text-slate-600">Transferencias instantáneas entre usuarios GMO en cualquier momento.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-lg font-extrabold text-gmoBlue">Pago de facturas</h3>
+            <p class="mt-2 text-slate-600">Luz, agua, internet y más, desde una sola app en pocos toques.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-lg font-extrabold text-gmoBlue">Recargas GETESA</h3>
+            <p class="mt-2 text-slate-600">Compra saldo y paquetes para tus líneas de forma inmediata.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h3 class="text-lg font-extrabold text-gmoBlue">Pago en comercios</h3>
+            <p class="mt-2 text-slate-600">Escanea y paga en tiendas afiliadas con seguridad y trazabilidad.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="seguridad" class="bg-gmoBlue px-6 py-20 text-white lg:px-8">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gmoLime">Seguridad primero</p>
+            <h2 class="mt-3 text-3xl font-black md:text-4xl">Tu dinero protegido con estándares avanzados.</h2>
+            <p class="mt-5 max-w-xl text-white/85">
+              GMO integra autenticación robusta, verificación de identidad y monitoreo de transacciones para que cada operación sea rápida y segura.
+            </p>
+          </div>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-white/25 bg-white/10 p-5">
+              <p class="text-xl font-black text-gmoLime">PIN + OTP</p>
+              <p class="mt-2 text-sm text-white/80">Doble validación para accesos y operaciones sensibles.</p>
+            </div>
+            <div class="rounded-2xl border border-white/25 bg-white/10 p-5">
+              <p class="text-xl font-black text-gmoLime">Alertas en tiempo real</p>
+              <p class="mt-2 text-sm text-white/80">Recibe notificaciones instantáneas de cada movimiento.</p>
+            </div>
+            <div class="rounded-2xl border border-white/25 bg-white/10 p-5">
+              <p class="text-xl font-black text-gmoLime">Historial completo</p>
+              <p class="mt-2 text-sm text-white/80">Consulta todas tus operaciones con total transparencia.</p>
+            </div>
+            <div class="rounded-2xl border border-white/25 bg-white/10 p-5">
+              <p class="text-xl font-black text-gmoLime">Soporte cercano</p>
+              <p class="mt-2 text-sm text-white/80">Equipo GETESA listo para ayudarte cuando lo necesites.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <h2 class="text-3xl font-black text-slate-900 md:text-4xl">Empieza en 3 pasos.</h2>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-200">
+            <p class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gmoBlue text-lg font-extrabold text-white">1</p>
+            <h3 class="text-lg font-extrabold text-gmoBlue">Regístrate</h3>
+            <p class="mt-2 text-slate-600">Abre tu cuenta GMO con tu número GETESA y validación de identidad.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-200">
+            <p class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gmoBlue text-lg font-extrabold text-white">2</p>
+            <h3 class="text-lg font-extrabold text-gmoBlue">Recarga saldo</h3>
+            <p class="mt-2 text-slate-600">Añade dinero en agentes autorizados o por transferencia bancaria.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-200">
+            <p class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gmoBlue text-lg font-extrabold text-white">3</p>
+            <h3 class="text-lg font-extrabold text-gmoBlue">Opera al instante</h3>
+            <p class="mt-2 text-slate-600">Envía, paga y controla tu dinero desde tu móvil, cuando quieras.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-slate-100 px-6 py-20 lg:px-8">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="text-3xl font-black text-slate-900 md:text-4xl">Preguntas frecuentes.</h2>
+          <div class="mt-8 space-y-4">
+            <details class="rounded-2xl bg-white p-5 shadow-soft" open>
+              <summary class="cursor-pointer text-lg font-bold text-gmoBlue">¿Quién puede usar GMO?</summary>
+              <p class="mt-3 text-slate-600">Cualquier cliente con línea activa GETESA y documento de identificación válido.</p>
+            </details>
+            <details class="rounded-2xl bg-white p-5 shadow-soft">
+              <summary class="cursor-pointer text-lg font-bold text-gmoBlue">¿Necesito internet para usar GMO?</summary>
+              <p class="mt-3 text-slate-600">Puedes usar la app con internet y también acceder a operaciones clave por canales USSD.</p>
+            </details>
+            <details class="rounded-2xl bg-white p-5 shadow-soft">
+              <summary class="cursor-pointer text-lg font-bold text-gmoBlue">¿Tiene comisión enviar dinero?</summary>
+              <p class="mt-3 text-slate-600">Las tarifas dependen del monto y tipo de operación. Consulta la tabla oficial en la app.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gmoDark px-6 py-10 text-white lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div>
+          <p class="text-xl font-black text-gmoLime">GMO by GETESA</p>
+          <p class="mt-1 text-sm text-white/70">Dinero móvil para una Guinea Ecuatorial más conectada.</p>
+        </div>
+        <a href="#" class="rounded-xl bg-gmoLime px-5 py-3 text-sm font-bold text-gmoDark">Quiero empezar</a>
+      </div>
+    </footer>
+  </body>
+</html>
