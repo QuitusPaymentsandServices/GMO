@@ -1,18 +1,24 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GMO by GETESA | Dinero móvil en Guinea Ecuatorial</title>
+    <title>GMO | Dinero móvil en Guinea Ecuatorial</title>
     <meta
       name="description"
-      content="GMO by GETESA: envía, recibe y gestiona tu dinero móvil en segundos con una experiencia simple, rápida y segura."
+      content="GMO: envía, recibe y gestiona tu dinero móvil en segundos con una experiencia simple, rápida y segura."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
             colors: {
               gmoBlue: "#1026BE",
               gmoLime: "#9AE63A",
@@ -29,11 +35,16 @@
             keyframes: {
               float: {
                 "0%, 100%": { transform: "translateY(0px)" },
-                "50%": { transform: "translateY(-9px)" }
+                "50%": { transform: "translateY(-12px)" }
+              },
+              pulseGlow: {
+                "0%, 100%": { opacity: 0.8, transform: "scale(1)" },
+                "50%": { opacity: 1, transform: "scale(1.05)" }
               }
             },
             animation: {
-              float: "float 5s ease-in-out infinite"
+              float: "float 6s ease-in-out infinite",
+              pulseGlow: "pulseGlow 4s ease-in-out infinite"
             }
           }
         }
@@ -60,14 +71,8 @@
       </div>
 
       <header class="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-        <a href="#" class="flex items-center gap-3">
-          <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gmoLime/95 p-2">
-            <svg viewBox="0 0 100 100" class="h-full w-full text-gmoBlue" fill="currentColor" aria-hidden="true">
-              <path d="M48 8l20 20-20 20V32L30 50l18 18v24L12 56l18-18 18-18V8z" />
-            </svg>
-          </span>
-          <span class="text-2xl font-black tracking-wider text-gmoLime">GMO</span>
-          <span class="hidden rounded-full border border-gmoLime/40 px-3 py-1 text-xs font-semibold text-gmoLime/90 md:inline">by GETESA</span>
+        <a href="#top" class="flex items-center gap-3">
+          <img src="logo.jpg" alt="GMO" class="h-14 w-auto rounded-xl shadow-md hover:scale-105 transition-transform duration-300">
         </a>
 
         <nav class="hidden items-center gap-8 text-sm font-medium text-white/85 md:flex">
@@ -78,74 +83,77 @@
         </nav>
       </header>
 
-      <section class="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-24 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-14">
-        <div>
-          <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-gmoLime/35 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-gmoLime">
-            Simple · Rápido · Seguro
-          </p>
-          <h1 class="text-4xl font-black leading-tight text-white md:text-6xl">
-            El dinero móvil
-            <span class="text-gmoLime">más inteligente</span>
-            de Guinea Ecuatorial.
+      <section class="relative mx-auto grid max-w-7xl items-center gap-16 px-6 pb-24 pt-12 lg:grid-cols-2 lg:px-8 lg:pb-32 lg:pt-20">
+        <div class="z-10">
+          <div class="mb-8 inline-flex items-center gap-3 rounded-full border border-gmoLime/30 bg-white/5 px-4 py-1.5 backdrop-blur-md">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-gmoLime opacity-75"></span>
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-gmoLime"></span>
+            </span>
+            <span class="text-xs font-bold uppercase tracking-widest text-gmoLime">Lanzamiento Próximamente</span>
+          </div>
+          
+          <h1 class="text-5xl font-black leading-[1.1] text-white md:text-7xl lg:text-8xl">
+            EL FUTURO ES <br/>
+            <span class="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-gmoLime via-white to-gmoLime animate-pulseGlow">
+              GMO
+            </span>
           </h1>
-          <p class="mt-6 max-w-xl text-lg text-white/85 md:text-xl">
-            Con GMO de GETESA, envías y recibes dinero en segundos, pagas servicios y controlas tus finanzas desde tu teléfono, sin complicaciones.
+          
+          <p class="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/80 md:text-xl">
+            Redefiniendo el ecosistema financiero de Guinea Ecuatorial. Una experiencia digital sin precedentes, diseñada para darte el control total.
           </p>
 
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a href="#" class="rounded-2xl bg-gmoLime px-7 py-3 text-sm font-bold uppercase tracking-wide text-gmoDark transition hover:scale-[1.02] hover:shadow-glow">
-              Abrir cuenta ahora
+          <div class="mt-12 flex flex-wrap gap-5">
+            <a href="#servicios" class="group relative">
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gmoLime to-gmoBlue opacity-25 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+              <button class="relative flex items-center gap-2 rounded-2xl bg-white px-8 py-4 text-sm font-black uppercase tracking-wider text-gmoDark transition hover:bg-gmoLime">
+                <span>Ver Servicios</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
             </a>
-            <a href="#como-funciona" class="rounded-2xl border border-white/30 px-7 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:border-gmoLime hover:text-gmoLime">
-              Ver demo
+            <a href="#como-funciona" class="flex items-center gap-2 rounded-2xl border border-white/20 px-8 py-4 text-sm font-black uppercase tracking-wider text-white transition hover:bg-white/10">
+              Cómo Funciona
             </a>
           </div>
 
-          <div class="mt-12 grid max-w-md grid-cols-3 gap-4 text-center">
-            <article class="glass rounded-2xl p-4 shadow-soft">
-              <p class="text-2xl font-extrabold text-gmoLime">24/7</p>
-              <p class="mt-1 text-xs text-white/80">Disponible</p>
-            </article>
-            <article class="glass rounded-2xl p-4 shadow-soft">
-              <p class="text-2xl font-extrabold text-gmoLime">0 colas</p>
-              <p class="mt-1 text-xs text-white/80">Todo móvil</p>
-            </article>
-            <article class="glass rounded-2xl p-4 shadow-soft">
-              <p class="text-2xl font-extrabold text-gmoLime">100%</p>
-              <p class="mt-1 text-xs text-white/80">Control digital</p>
-            </article>
+          <div class="mt-16 flex items-center gap-8 border-t border-white/10 pt-8">
+            <div>
+              <p class="text-3xl font-black text-white">2026</p>
+              <p class="text-xs uppercase tracking-widest text-white/50">Lanzamiento</p>
+            </div>
+            <div class="h-8 w-px bg-white/10"></div>
+            <div>
+              <p class="text-3xl font-black text-white">100%</p>
+              <p class="text-xs uppercase tracking-widest text-white/50">Digital</p>
+            </div>
           </div>
         </div>
 
-        <div class="relative mx-auto w-full max-w-lg">
-          <div class="absolute -left-12 top-8 hidden h-32 w-32 rotate-45 rounded-3xl bg-gmoLime/20 blur-2xl md:block"></div>
-          <div class="absolute -right-8 bottom-2 h-28 w-28 rounded-full bg-gmoLime/30 blur-2xl"></div>
+        <div class="relative lg:block group">
+          <!-- Advanced Multi-layer Glow Effects -->
+          <div class="absolute -inset-10 bg-gmoLime/20 blur-[100px] rounded-full opacity-40 animate-pulse group-hover:bg-gmoLime/30 transition-colors duration-700"></div>
+          <div class="absolute -inset-4 bg-gradient-to-br from-gmoLime/40 to-gmoBlue/40 blur-3xl rounded-full opacity-30 animate-pulse duration-[4000ms]"></div>
+          
+          <!-- Decorative Floating Rings -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-white/5 rounded-[4rem] animate-[spin_20s_linear_infinite] opacity-50"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-gmoLime/10 rounded-[5rem] animate-[spin_30s_linear_infinite_reverse] opacity-30"></div>
 
-          <div class="animate-float rounded-[2.6rem] border border-white/25 bg-gmoDark/55 p-3 shadow-glow backdrop-blur-sm">
-            <div class="rounded-[2.2rem] bg-gradient-to-b from-[#1132d4] to-[#0b1f8f] p-6">
-              <div class="mb-5 flex items-center justify-between">
-                <p class="text-sm font-semibold text-gmoLime">GMO Wallet</p>
-                <span class="rounded-full bg-gmoLime/20 px-3 py-1 text-xs text-gmoLime">Activo</span>
-              </div>
-              <p class="text-sm text-white/75">Saldo disponible</p>
-              <p class="mt-2 text-4xl font-black text-white">1.250.000 XAF</p>
-
-              <div class="mt-6 space-y-3">
-                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
-                  <span>Envío a Ana M.</span>
-                  <span class="font-semibold text-gmoLime">-15.000</span>
-                </div>
-                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
-                  <span>Recarga móvil</span>
-                  <span class="font-semibold text-gmoLime">-2.000</span>
-                </div>
-                <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-sm">
-                  <span>Depósito</span>
-                  <span class="font-semibold text-gmoLime">+50.000</span>
-                </div>
-              </div>
-              <button class="mt-6 w-full rounded-xl bg-gmoLime py-3 text-sm font-extrabold text-gmoDark">Enviar dinero</button>
-            </div>
+          <div class="relative animate-float transition-all duration-700 [perspective:1000px] group-hover:[transform:rotateX(2deg)_rotateY(-2deg)_scale(1.02)]">
+            <!-- Glass Rim Light Overlay -->
+            <div class="absolute -inset-[1px] rounded-[3rem] bg-gradient-to-tr from-white/10 via-white/50 to-white/10 opacity-20 z-20 pointer-events-none"></div>
+            
+            <img 
+              src="hero_visual.png" 
+              alt="GMO Financial Vision" 
+              class="relative z-10 w-full rounded-[3rem] border border-white/20 shadow-[0_0_80px_rgba(154,230,58,0.15)] backdrop-blur-sm transition-all duration-500 group-hover:shadow-[0_0_100px_rgba(154,230,58,0.25)]"
+            >
+            
+            <!-- Dynamic Light Reflections -->
+            <div class="absolute -bottom-10 -right-10 h-48 w-48 rounded-full bg-gmoBlue/30 blur-3xl mix-blend-screen animate-pulse"></div>
+            <div class="absolute -top-10 -left-10 h-48 w-48 rounded-full bg-gmoLime/20 blur-3xl mix-blend-screen animate-pulse duration-[5000ms]"></div>
           </div>
         </div>
       </section>
@@ -168,13 +176,43 @@
             <p class="mt-2 text-slate-600">Luz, agua, internet y más, desde una sola app en pocos toques.</p>
           </article>
           <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <h3 class="text-lg font-extrabold text-gmoBlue">Recargas GETESA</h3>
+            <h3 class="text-lg font-extrabold text-gmoBlue">Recargas de telefonía</h3>
             <p class="mt-2 text-slate-600">Compra saldo y paquetes para tus líneas de forma inmediata.</p>
           </article>
           <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
             <h3 class="text-lg font-extrabold text-gmoBlue">Pago en comercios</h3>
             <p class="mt-2 text-slate-600">Escanea y paga en tiendas afiliadas con seguridad y trazabilidad.</p>
           </article>
+        </div>
+      </section>
+
+      <section id="experiencia" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-gmoBlue">Tu vida, más simple</p>
+          <h2 class="mt-3 text-3xl font-black text-slate-900 md:text-5xl">Vive la experiencia GMO.</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
+            Diseñado para integrarse perfectamente en tu día a día, brindándote libertad y control total sobre tu dinero.
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="group relative overflow-hidden rounded-[2.5rem] bg-gmoDark shadow-soft transition-all hover:shadow-glow">
+            <img 
+              src="hist02.jpg" 
+              alt="Simple, rápido, seguro" 
+              class="h-full w-full object-cover transition duration-500 group-hover:rotate-1 group-hover:scale-105"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-gmoDark/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          </div>
+
+          <div class="group relative overflow-hidden rounded-[2.5rem] bg-gmoDark shadow-soft transition-all hover:shadow-glow">
+            <img 
+              src="hist03.jpg" 
+              alt="Dinero en segundos" 
+              class="h-full w-full object-cover transition duration-500 group-hover:-rotate-1 group-hover:scale-105"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-gmoDark/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          </div>
         </div>
       </section>
 
@@ -202,7 +240,7 @@
             </div>
             <div class="rounded-2xl border border-white/25 bg-white/10 p-5">
               <p class="text-xl font-black text-gmoLime">Soporte cercano</p>
-              <p class="mt-2 text-sm text-white/80">Equipo GETESA listo para ayudarte cuando lo necesites.</p>
+              <p class="mt-2 text-sm text-white/80">Equipo de soporte GMO listo para ayudarte cuando lo necesites.</p>
             </div>
           </div>
         </div>
@@ -214,7 +252,7 @@
           <article class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-200">
             <p class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gmoBlue text-lg font-extrabold text-white">1</p>
             <h3 class="text-lg font-extrabold text-gmoBlue">Regístrate</h3>
-            <p class="mt-2 text-slate-600">Abre tu cuenta GMO con tu número GETESA y validación de identidad.</p>
+            <p class="mt-2 text-slate-600">Abre tu cuenta GMO con tu número de teléfono y validación de identidad.</p>
           </article>
           <article class="rounded-3xl bg-white p-6 shadow-soft ring-1 ring-slate-200">
             <p class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-gmoBlue text-lg font-extrabold text-white">2</p>
@@ -235,7 +273,7 @@
           <div class="mt-8 space-y-4">
             <details class="rounded-2xl bg-white p-5 shadow-soft" open>
               <summary class="cursor-pointer text-lg font-bold text-gmoBlue">¿Quién puede usar GMO?</summary>
-              <p class="mt-3 text-slate-600">Cualquier cliente con línea activa GETESA y documento de identificación válido.</p>
+              <p class="mt-3 text-slate-600">Cualquier cliente con línea activa y documento de identificación válido.</p>
             </details>
             <details class="rounded-2xl bg-white p-5 shadow-soft">
               <summary class="cursor-pointer text-lg font-bold text-gmoBlue">¿Necesito internet para usar GMO?</summary>
@@ -253,10 +291,12 @@
     <footer class="bg-gmoDark px-6 py-10 text-white lg:px-8">
       <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 md:flex-row md:items-center">
         <div>
-          <p class="text-xl font-black text-gmoLime">GMO by GETESA</p>
+          <img src="logo.jpg" alt="GMO" class="h-12 w-auto mb-4 rounded-lg">
           <p class="mt-1 text-sm text-white/70">Dinero móvil para una Guinea Ecuatorial más conectada.</p>
         </div>
-        <a href="#" class="rounded-xl bg-gmoLime px-5 py-3 text-sm font-bold text-gmoDark">Quiero empezar</a>
+        <div class="flex items-center gap-3 rounded-xl bg-white/5 border border-white/10 px-5 py-3">
+          <span class="text-sm font-bold text-white/80 uppercase tracking-widest">Lanzamiento 2026</span>
+        </div>
       </div>
     </footer>
   </body>
